@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Guide — Impart Planning</title>
+<meta name="description" content="Stone &amp; Bone: the color, type, mark, and layout system for Impart Planning.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .guide-head { padding-block: clamp(3rem, 8vw, 5.5rem) 0; }
+  .guide-nav ul { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; margin-top: 1.5rem; }
+  .guide-nav a { font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.14em; }
+
+  .swatches { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+  .swatch { border: 1px solid var(--bone-warm); }
+  .swatch__chip { height: 6rem; }
+  .swatch__meta { padding: 0.85rem 1rem; font-size: var(--step--1); line-height: 1.5; }
+  .swatch__name { display: block; font-family: var(--serif); font-size: var(--step-0); }
+  .swatch__hex { display: block; font-family: var(--sans); letter-spacing: 0.1em; color: var(--stone-dark); }
+  .swatch__use { display: block; color: var(--stone-dark); margin-top: 0.35rem; }
+
+  .specimen { border-top: 1px solid var(--bone-warm); padding: 1.5rem 0; }
+  .specimen__note { font-size: var(--step--1); color: var(--stone-dark); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .specimen p, .specimen h2, .specimen h3 { margin-bottom: 0; }
+
+  .mark-row { display: flex; align-items: flex-end; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .mark-row svg { color: var(--accent); }
+  .mark-row .mark-lg { width: 6rem; height: 6rem; }
+  .mark-row .mark-md { width: 3rem; height: 3rem; }
+  .mark-row .mark-sm { width: 1.5rem; height: 1.5rem; }
+  .mark-row figcaption { font-size: var(--step--1); color: var(--stone-dark); margin-top: 0.5rem; }
+
+  .do-dont { display: grid; gap: 1.5rem 3rem; grid-template-columns: 1fr; }
+  @media (min-width: 48em) { .do-dont { grid-template-columns: 1fr 1fr; } }
+  .do-dont h3 { font-family: var(--sans); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.16em; padding-top: 0.9rem; margin-bottom: 0.8rem; }
+  .do-dont .do  { border-top: 2px solid var(--accent); }
+  .do-dont .dont { border-top: 2px solid var(--stone); }
+  .do-dont li { padding: 0.55rem 0; border-top: 1px solid var(--bone-warm); font-size: var(--step--1); line-height: 1.5; }
+
+  .ratios li { display: flex; justify-content: space-between; gap: 1rem; max-width: 34rem; padding: 0.6rem 0; border-top: 1px solid var(--bone-warm); font-size: var(--step--1); }
+  .ratios b { font-weight: 500; color: var(--stone-dark); }
+  .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: var(--step--1); }
+  pre.code { background: var(--bone); padding: 1.25rem; overflow-x: auto; line-height: 1.7; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#guide">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="../index.html" aria-label="Impart Planning — home">
+      <svg class="wordmark__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="3.5" y="3.5" width="25" height="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M10 22.5V11.5M10 11.5h6.2a3.1 3.1 0 0 1 0 6.2H10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M3.5 27.5h25" stroke="currentColor" stroke-width="1.4"/>
+      </svg>
+      <span class="wordmark__text">Impart Planning</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul><li><a href="../index.html">Back to site</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="guide">
+
+  <section class="guide-head">
+    <div class="wrap">
+      <p class="eyebrow">Brand Guide</p>
+      <h1 class="hero__tagline" style="font-style:normal;font-size:var(--step-3);color:var(--ink);max-width:none;">Stone &amp; Bone</h1>
+      <hr class="rule rule--wide">
+      <p class="hero__lead" style="max-width:34ch;font-size:var(--step-1);">Warm greys and cream carried forward from the existing site, tightened into a system. The reference point is a museum wall label.</p>
+      <nav class="guide-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#type">Type</a></li>
+          <li><a href="#mark">Mark</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#voice">Voice</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" id="color" aria-labelledby="color-title">
+    <div class="wrap">
+      <p class="section__index">01 — Color</p>
+      <h2 class="section__title" id="color-title">Ten values, used in proportion</h2>
+      <p class="standfirst standfirst--tight">Roughly 70% paper and bone, 25% ink, 5% accent. More accent than that and the system stops reading as institutional.</p>
+
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#484742"></div><div class="swatch__meta"><span class="swatch__name">Ink</span><span class="swatch__hex">#484742</span><span class="swatch__use">Body text, dark bands, buttons</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#31302D"></div><div class="swatch__meta"><span class="swatch__name">Ink deep</span><span class="swatch__hex">#31302D</span><span class="swatch__use">Footer only</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#7A766A"></div><div class="swatch__meta"><span class="swatch__name">Stone</span><span class="swatch__hex">#7A766A</span><span class="swatch__use">Hairlines, borders — not body text</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#5E5B52"></div><div class="swatch__meta"><span class="swatch__name">Stone dark</span><span class="swatch__hex">#5E5B52</span><span class="swatch__use">Secondary text, eyebrows</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#EAE7DF"></div><div class="swatch__meta"><span class="swatch__name">Bone</span><span class="swatch__hex">#EAE7DF</span><span class="swatch__use">Alternating section ground</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E0DCD1"></div><div class="swatch__meta"><span class="swatch__name">Bone warm</span><span class="swatch__hex">#E0DCD1</span><span class="swatch__use">Rules; text on dark bands</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#FBFAF7;border-bottom:1px solid #E0DCD1"></div><div class="swatch__meta"><span class="swatch__name">Paper</span><span class="swatch__hex">#FBFAF7</span><span class="swatch__use">Default page ground</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#8C5A3C"></div><div class="swatch__meta"><span class="swatch__name">Accent</span><span class="swatch__hex">#8C5A3C</span><span class="swatch__use">Links, numerals, one rule per section</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#6F472F"></div><div class="swatch__meta"><span class="swatch__name">Accent dim</span><span class="swatch__hex">#6F472F</span><span class="swatch__use">Hover, error text</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#9A968A"></div><div class="swatch__meta"><span class="swatch__name">Rule dark</span><span class="swatch__hex">#9A968A</span><span class="swatch__use">Hairlines on ink bands only</span></div></div>
+      </div>
+
+      <h3 class="services__heading" style="margin-top:3rem;">Contrast, measured</h3>
+      <ul class="ratios">
+        <li><span>Ink on paper</span><b>8.9 : 1 &nbsp;AAA</b></li>
+        <li><span>Stone dark on paper</span><b>6.5 : 1 &nbsp;AA</b></li>
+        <li><span>Accent on paper</span><b>5.5 : 1 &nbsp;AA</b></li>
+        <li><span>Bone on ink</span><b>7.5 : 1 &nbsp;AAA</b></li>
+        <li><span>Stone on paper</span><b>4.4 : 1 &nbsp;large text and rules only</b></li>
+        <li><span>Rule dark on ink</span><b>3.2 : 1 &nbsp;non-text, AA</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--bone" id="type" aria-labelledby="type-title">
+    <div class="wrap">
+      <p class="section__index">02 — Type</p>
+      <h2 class="section__title" id="type-title">Two families, six steps</h2>
+      <p class="standfirst standfirst--tight">Libre Baskerville sets anything that carries meaning on its own. Cabin handles everything that supports it.</p>
+
+      <div class="specimen">
+        <p class="specimen__note">Display — Libre Baskerville 400 / 1.15</p>
+        <h2 style="font-size:var(--step-3);">Impart Planning</h2>
+      </div>
+      <div class="specimen">
+        <p class="specimen__note">Section title — step 2</p>
+        <h3 style="font-size:var(--step-2);">Full-service Art Planning and Collection Management</h3>
+      </div>
+      <div class="specimen">
+        <p class="specimen__note">Standfirst — serif, 34ch measure</p>
+        <p class="standfirst" style="margin-bottom:0;">We make art easy. We know how to build a collection and take care of it.</p>
+      </div>
+      <div class="specimen">
+        <p class="specimen__note">Body — Cabin 400 / 1.65, 62ch measure</p>
+        <p>We provide full-service art planning and collection management for government agencies, businesses, not-for-profits, and individual collectors. We work with stakeholders to identify collection goals.</p>
+      </div>
+      <div class="specimen">
+        <p class="specimen__note">Label caps — Cabin 500, 0.16em tracking</p>
+        <p class="col__label" style="border-top:0;padding-top:0;margin-bottom:0;">Installation, Engineering, Construction</p>
+      </div>
+      <div class="specimen">
+        <p class="specimen__note">Wall label — serif on a hairline</p>
+        <ul class="labels" style="max-width:26rem;">
+          <li class="label"><span class="label__no">06</span>Installation, Engineering, Construction</li>
+          <li class="label"><span class="label__no">08</span>Maintenance and Conservation</li>
+        </ul>
+      </div>
+
+      <pre class="code" style="margin-top:2.5rem;">--step--1: 0.82 – 0.88rem   labels, meta
+--step-0:  1.00 – 1.08rem   body
+--step-1:  1.20 – 1.40rem   standfirst, wordmark
+--step-2:  1.50 – 2.00rem   section titles, pull quotes
+--step-3:  2.00 – 3.10rem   page title</pre>
+    </div>
+  </section>
+
+  <section class="section" id="mark" aria-labelledby="mark-title">
+    <div class="wrap">
+      <p class="section__index">03 — Mark</p>
+      <h2 class="section__title" id="mark-title">A frame on a plinth</h2>
+      <p class="standfirst standfirst--tight">A capital P inside a thin frame, over a baseline rule that runs past it. Inline SVG in <span class="code">currentColor</span>, so it takes the color of whatever sits around it.</p>
+
+      <div class="mark-row">
+        <figure style="margin:0">
+          <svg class="mark-lg" viewBox="0 0 32 32" aria-label="Impart Planning mark, large">
+            <rect x="3.5" y="3.5" width="25" height="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M10 22.5V11.5M10 11.5h6.2a3.1 3.1 0 0 1 0 6.2H10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 27.5h25" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <figcaption>96px</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <svg class="mark-md" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="25" height="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M10 22.5V11.5M10 11.5h6.2a3.1 3.1 0 0 1 0 6.2H10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 27.5h25" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <figcaption>48px</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <svg class="mark-sm" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="25" height="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M10 22.5V11.5M10 11.5h6.2a3.1 3.1 0 0 1 0 6.2H10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 27.5h25" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <figcaption>24px — minimum</figcaption>
+        </figure>
+        <figure style="margin:0;background:var(--ink);padding:1rem 1.25rem;">
+          <svg class="mark-md" viewBox="0 0 32 32" style="color:var(--bone)" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="25" height="19" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M10 22.5V11.5M10 11.5h6.2a3.1 3.1 0 0 1 0 6.2H10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 27.5h25" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <figcaption style="color:var(--bone-warm)">On ink</figcaption>
+        </figure>
+      </div>
+
+      <div class="do-dont">
+        <div class="do">
+          <h3>Do</h3>
+          <ul>
+            <li>Keep clear space equal to the mark's own height on all four sides.</li>
+            <li>Let it inherit color — accent on paper, bone on ink.</li>
+            <li>Pair it with the wordmark at 0.7rem separation.</li>
+          </ul>
+        </div>
+        <div class="dont">
+          <h3>Do not</h3>
+          <ul>
+            <li>Set it below 24px; the interior of the P closes up.</li>
+            <li>Add gradients, shadows, rotation, or a second color.</li>
+            <li>Stretch the frame to fit a container.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink" id="layout" aria-labelledby="layout-title">
+    <div class="wrap">
+      <p class="section__index">04 — Layout</p>
+      <h2 class="section__title" id="layout-title">Whitespace is the design</h2>
+      <div class="expertise">
+        <p class="expertise__body">Container is 72rem at most. Bands alternate paper, bone, ink, paper — never two dark bands in a row. Three columns above 768px, one below, and no breakpoint in between.</p>
+        <div class="expertise__standards">
+          <p class="col__label">Rules of the grid</p>
+          <ul class="standards">
+            <li>Band padding: clamp(4rem, 9vw, 7.5rem)</li>
+            <li>Gutter: clamp(1.25rem, 4vw, 3rem)</li>
+            <li>Hairlines 1px; one 2px accent rule per section at most</li>
+            <li>Measure: 62ch body, 34ch standfirst, 20–28ch display</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pullquote">When a section looks weak, add space above the heading — not color inside it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="voice" aria-labelledby="voice-title">
+    <div class="wrap">
+      <p class="section__index">05 — Voice</p>
+      <h2 class="section__title" id="voice-title">Short declaratives, named standards</h2>
+      <div class="do-dont">
+        <div class="do">
+          <h3>Sounds right</h3>
+          <ul>
+            <li>&ldquo;We make art easy.&rdquo;</li>
+            <li>&ldquo;Relationships matter. Communities matter. Art builds both.&rdquo;</li>
+            <li>&ldquo;More than forty years of experience.&rdquo;</li>
+            <li>Plain verbs: plan, build, manage, steward, navigate, maintain.</li>
+          </ul>
+        </div>
+        <div class="dont">
+          <h3>Sounds wrong</h3>
+          <ul>
+            <li>&ldquo;Solutions,&rdquo; &ldquo;passionate,&rdquo; &ldquo;world-class,&rdquo; &ldquo;leverage.&rdquo;</li>
+            <li>Exclamation points.</li>
+            <li>Any claim not attached to a standard, a year count, or a named client type.</li>
+            <li>Rewriting the descriptor line. It is fixed.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:2.5rem;">The ellipsis in &ldquo;Our Services &hellip;&rdquo; and &ldquo;&hellip; to make art easy&rdquo; is theirs. It stays. Full written guide: <a href="../BRAND.md">BRAND.md</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer__tagline">Stone &amp; Bone — the working brand system for Impart Planning.</p>
+    <hr class="rule">
+    <div class="footer__meta">
+      <p>Tokens live at the top of <span class="code">assets/css/styles.css</span></p>
+      <p><a href="../index.html">Back to site</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
